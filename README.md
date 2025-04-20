@@ -2,11 +2,11 @@
 
 A modern React frontend for the ChatLogger API, built with TypeScript, Tailwind CSS, and React Router.
 
-![image](https://github.com/user-attachments/assets/690050b2-f009-40af-862a-8538565047a2)
-
 ## Overview
 
 ChatLogger Dashboard is the frontend interface for the ChatLogger platform, which allows users to store, manage, and analyze chat interactions between users and AI assistants. This repository is part of the larger ChatLogger ecosystem.
+
+![image](https://github.com/user-attachments/assets/690050b2-f009-40af-862a-8538565047a2)
 
 ## Features
 
@@ -29,8 +29,8 @@ ChatLogger Dashboard is the frontend interface for the ChatLogger platform, whic
 
 ## Project Structure
 
-```
-frontend/
+```plaintext
+ChatLogger-Dashboard/
 ├── src/
 │   ├── components/    # Reusable UI components
 │   ├── pages/         # Page components

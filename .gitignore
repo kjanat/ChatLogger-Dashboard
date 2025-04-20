@@ -47,3 +47,5 @@ lerna-debug.log*
 .temp
 api.json
 
+# VSCode
+.vscode/
