@@ -1,0 +1,53 @@
+{
+	"name": "@kjanat/chatlogger-dashboard",
+	"private": true,
+    "description": "Dashboard for ChatLogger",
+	"version": "0.1.0",
+    "author": "Kaj Kowalski <dev@kajkowalski.nl> (https://github.com/kjanat)",
+    "license": "MIT",
+	"type": "module",
+    "homepage": "https://github.com/kjanat/ChatLogger-Dashboard#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kjanat/ChatLogger-Dashboard.git"
+    },
+    "bugs": {
+        "url": "https://github.com/kjanat/ChatLogger-Dashboard/issues",
+        "email": "dev+issues-chatlogger-dashboard@kjanat.com"
+    },
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"lint": "eslint --config eslint.config.js .",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@headlessui/react": "^2.2.2",
+		"@heroicons/react": "^2.2.0",
+		"@tanstack/react-query": "^5.74.4",
+		"axios": "^1.8.4",
+		"date-fns": "^4.1.0",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
+		"react-hook-form": "^7.55.0",
+		"react-icons": "^5.5.0",
+		"react-router-dom": "^7.5.1",
+		"zustand": "^5.0.3"
+	},
+	"devDependencies": {
+		"@tailwindcss/postcss": "^4.1.4",
+		"@types/react": "^19.1.2",
+		"@types/react-dom": "^19.1.2",
+		"@typescript-eslint/eslint-plugin": "^8.30.1",
+		"@typescript-eslint/parser": "^8.30.1",
+		"@vitejs/plugin-react": "^4.4.0",
+		"autoprefixer": "^10.4.17",
+		"eslint": "^9.24.0",
+		"eslint-plugin-react-hooks": "^5.2.0",
+		"eslint-plugin-react-refresh": "^0.4.19",
+		"postcss": "^8.4.35",
+		"tailwindcss": "^4.1.4",
+		"typescript": "^5.8.3",
+		"vite": "^6.3.1"
+	}
+}
