@@ -16,7 +16,7 @@ jobs:
 
       # Install dependencies (if package.json has dependencies like `semver`)
       - name: Install Dependencies
-        run: apt install jq node-semver -y
+        run: sudo apt install jq node-semver -y
 
       # Extract version from package.json
       - name: Read Version from package.json
