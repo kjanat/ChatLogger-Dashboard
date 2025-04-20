@@ -14,22 +14,14 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # Set up Node.js (to read package.json)
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-
       # Install dependencies (if package.json has dependencies like `semver`)
       - name: Install Dependencies
-        run: |
-          npm ci
-          npm install semver
+        run: apt install jq node-semver -y
 
       # Extract version from package.json
       - name: Read Version from package.json
         id: get_version
-        run: echo "VERSION=$(node -p \"require('./package.json').version\")" >> $GITHUB_ENV
+        run: echo "VERSION=$(jq -r '.version' package.json)" >> $GITHUB_ENV
 
       # Fetch existing tags
       - name: Fetch All Tags
