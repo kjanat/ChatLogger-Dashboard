@@ -1,13 +1,14 @@
 name: Deploy to Cloudflare Pages
 
 on:
-  push:
-    branches:
-      - main
-      - master
+  # push:
+  #   branches:
+  #     - main
+  #     - master
 
 jobs:
   deploy:
+    if: false
     runs-on: ubuntu-latest
     name: Deploy
     steps:
