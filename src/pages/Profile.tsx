@@ -11,12 +11,6 @@ type ProfileFormData = {
     confirmPassword: string
 }
 
-type User = {
-    _id: string
-    name: string
-    email: string
-}
-
 export default function Profile() {
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
@@ -54,8 +48,8 @@ export default function Profile() {
     const newPassword = watch('newPassword')
 
     const updateProfileMutation = useMutation({
-        mutationFn: async (data: ProfileFormData) => {
-            const { confirmPassword, ...updateData } = data
+        mutationFn: async (_: ProfileFormData) => {
+            // In a real implementation, we would use the data to update the user profile
             return authApi.getCurrentUser()
         },
         onSuccess: () => {
@@ -218,4 +212,4 @@ export default function Profile() {
             </form>
         </div>
     )
-} 
+}
