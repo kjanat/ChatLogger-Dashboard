@@ -1,44 +1,28 @@
-import prettierConfig from 'eslint-config-prettier';
-import js from '@eslint/js';
-import * as tseslint from 'typescript-eslint';
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "typescript-eslint";
 
-export default [
-    {
-        ignores: ['dist/*', 'node_modules/*', 'coverage/*', '.eslintrc.cjs']
+export default tseslint.config(
+  { ignores: ["dist"] },
+  {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
     },
-    js.configs.recommended,
-    ...tseslint.configs.recommended,
-    {
-        files: ['**/*.{ts,tsx}'],
-        plugins: {
-            '@typescript-eslint': tseslint.plugin,
-        },
-        languageOptions: {
-            parser: tseslint.parser,
-            parserOptions: {
-                ecmaVersion: 'latest',
-                sourceType: 'module',
-                ecmaFeatures: {
-                    jsx: true
-                },
-            },
-        },
-        rules: {
-            // TypeScript specific rules
-            '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-            'no-unused-vars': 'off',
-        }
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
     },
-    {
-        files: ['**/*.{jsx,tsx}'],
-        settings: {
-            react: {
-                version: 'detect'
-            }
-        },
-        rules: {
-            'react/react-in-jsx-scope': 'off',
-        }
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
     },
-    prettierConfig
-]; 
+  },
+);
