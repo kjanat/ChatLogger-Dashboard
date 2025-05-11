@@ -1,7 +1,7 @@
 {
   "name": "@kjanat/chatlogger-dashboard",
   "description": "Dashboard for ChatLogger",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Kaj Kowalski <dev@kajkowalski.nl> (https://github.com/kjanat)",
   "license": "MIT",
   "type": "module",
