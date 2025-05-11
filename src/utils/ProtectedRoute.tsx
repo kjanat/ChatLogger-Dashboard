@@ -24,4 +24,4 @@ export function ProtectedRoute() {
 
   // If authenticated, render the child routes
   return <Outlet />;
-} 
+}

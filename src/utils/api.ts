@@ -54,7 +54,7 @@ export interface User {
 export interface Organization {
     _id: string;
     name: string;
-    apiKeys?: { name: string; key: string }[];
+    apiKeys?: { name: string; key: string; }[];
     isActive: boolean;
     createdAt: string;
     updatedAt: string;
@@ -81,7 +81,7 @@ export const authApi = {
 };
 
 export const chatApi = {
-    getChats: async (params?: { page?: number; limit?: number; isActive?: boolean }) => {
+    getChats: async (params?: { page?: number; limit?: number; isActive?: boolean; }) => {
         try {
             const response = await api.get('/chats', { params });
             // Return an empty array if response.data.chats is undefined
@@ -96,11 +96,11 @@ export const chatApi = {
         const response = await api.get(`/chats/${id}`);
         return response.data.chat;
     },
-    createChat: async (data: { title: string; organizationId: string; userId: string; source?: string; tags?: string[]; metadata?: any }) => {
+    createChat: async (data: { title: string; organizationId: string; userId: string; source?: string; tags?: string[]; metadata?: any; }) => {
         const response = await api.post('/chats', data);
         return response.data.chat;
     },
-    updateChat: async (id: string, data: { title?: string; tags?: string[]; metadata?: any; isActive?: boolean }) => {
+    updateChat: async (id: string, data: { title?: string; tags?: string[]; metadata?: any; isActive?: boolean; }) => {
         const response = await api.put(`/chats/${id}`, data);
         return response.data.chat;
     },
@@ -108,7 +108,7 @@ export const chatApi = {
         const response = await api.delete(`/chats/${id}`);
         return response.data;
     },
-    searchChats: async (query: string, params?: { page?: number; limit?: number }) => {
+    searchChats: async (query: string, params?: { page?: number; limit?: number; }) => {
         const response = await api.get('/chats/search', {
             params: {
                 query,
@@ -148,7 +148,7 @@ export const messageApi = {
         const response = await api.post(`/messages/${chatId}`, data);
         return response.data.message;
     },
-    updateMessage: async (chatId: string, messageId: string, data: { content?: string; metadata?: any }) => {
+    updateMessage: async (chatId: string, messageId: string, data: { content?: string; metadata?: any; }) => {
         const response = await api.put(`/messages/${chatId}/${messageId}`, data);
         return response.data.updatedMessage;
     },
@@ -198,26 +198,26 @@ export const organizationApi = {
 };
 
 export const analyticsApi = {
-    getActivityMetrics: async (params?: { startDate?: string; endDate?: string }) => {
+    getActivityMetrics: async (params?: { startDate?: string; endDate?: string; }) => {
         const response = await api.get('/analytics/activity', { params });
         return response.data;
     },
-    getMessageStats: async (params?: { startDate?: string; endDate?: string }) => {
+    getMessageStats: async (params?: { startDate?: string; endDate?: string; }) => {
         const response = await api.get('/analytics/messages/stats', { params });
         return response.data;
     },
-    getTopUsers: async (params?: { limit?: number; startDate?: string; endDate?: string }) => {
+    getTopUsers: async (params?: { limit?: number; startDate?: string; endDate?: string; }) => {
         const response = await api.get('/analytics/users/top', { params });
         return response.data;
     }
 };
 
 export const exportApi = {
-    exportChats: async (params?: { startDate?: string; endDate?: string; format?: 'json' | 'csv' }) => {
+    exportChats: async (params?: { startDate?: string; endDate?: string; format?: 'json' | 'csv'; }) => {
         const response = await api.get('/export/chats', { params });
         return response.data;
     },
-    exportUserActivity: async (params?: { startDate?: string; endDate?: string; format?: 'json' | 'csv' }) => {
+    exportUserActivity: async (params?: { startDate?: string; endDate?: string; format?: 'json' | 'csv'; }) => {
         const response = await api.get('/export/users/activity', { params });
         return response.data;
     }
