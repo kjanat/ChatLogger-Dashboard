@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getToken } from '@/react-app/utils/auth';
+import { getToken } from './auth';
 
 // Create an Axios instance with custom configuration
 const api = axios.create({

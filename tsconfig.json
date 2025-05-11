@@ -1,8 +1,11 @@
 {
   "files": [],
-    "include": [
-        "src"
-    ],
+"include": [
+    "src/react-app/**/*"
+],
+"compilerOptions": {
+    "composite": true
+},
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" },

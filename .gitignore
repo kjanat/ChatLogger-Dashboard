@@ -49,3 +49,16 @@ api.json
 
 # VSCode
 .vscode/
+
+# Cloudflare Workers
+.wrangler/
+.dev.vars
+wrangler.toml.local
+
+# Additional build files
+.tmp/
+node_modules/.tmp/
+*.map
+
+# Generated worker files
+*.worker.*
