@@ -61,7 +61,7 @@ export default function Home() {
                                 {/* Mobile-responsive image with adjusted width for different screen sizes */}
                                 <div className="w-full overflow-hidden rounded-md shadow-2xl">
                                     <img 
-                                        src="https://placehold.co/1200x800/2563eb/FFFFFF/png?text=ChatLogger+Dashboard" 
+                                        src="https://placehold.co/1200x800/2563eb/FFFFFF?text=ChatLogger+Dashboard" 
                                         alt="ChatLogger Dashboard" 
                                         className="w-full h-auto object-cover" 
                                     />
