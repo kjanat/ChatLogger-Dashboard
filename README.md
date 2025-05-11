@@ -50,7 +50,7 @@ ChatLogger-Dashboard/
 ### Prerequisites
 
 - Node.js (v14 or higher)
-- npm or yarn
+- npm (or yarn)
 
 ### Installation
 
@@ -70,7 +70,7 @@ npm install
 3. Create a `.env` file in the root directory with the following variables:
 
 ```env
-VITE_API_URL=http://localhost:3000/api
+API_URL=http://localhost:3000/api
 ```
 
 ### Development
@@ -95,8 +95,8 @@ The built files will be in the `dist` directory.
 
 ## Related Repositories
 
-- [ChatLogger](https://github.com/kjanat/ChatLogger) - Main repository and documentation
-- [ChatLogger-API](https://github.com/kjanat/ChatLogger-API) - Backend API and server-side logic
+<!--- [ChatLogger](https://github.com/kjanat/ChatLogger) - Main repository and documentation-->
+- [ChatLogger-API-go](https://github.com/kjanat/ChatLogger-API-go) - Backend API and server-side logic
 
 ## Contributing
 
@@ -108,4 +108,5 @@ The built files will be in the `dist` directory.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
+This project is licensed under the MIT License.
+See the [LICENSE](LICENSE) details. 
