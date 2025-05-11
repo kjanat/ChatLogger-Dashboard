@@ -1,4 +1,4 @@
-name = "chatlogger-dashboard"
+name = 'dashboard'
 compatibility_date = "2025-05-11"
 
 # Configure static assets

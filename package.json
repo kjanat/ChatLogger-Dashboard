@@ -14,7 +14,8 @@
 	"bugs": {
 		"url": "https://github.com/kjanat/chatLogger-dashboard/issues",
 		"email": "dev+issues-chatlogger-dashboard@kjanat.com"
-	},	"scripts": {
+	},
+	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"lint": "eslint --config eslint.config.js .",
