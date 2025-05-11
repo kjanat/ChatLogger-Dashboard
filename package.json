@@ -6,20 +6,20 @@
 	"author": "Kaj Kowalski <dev@kajkowalski.nl> (https://github.com/kjanat)",
 	"license": "MIT",
 	"type": "module",
-	"homepage": "https://github.com/kjanat/ChatLogger-Dashboard#readme",
+	"homepage": "https://github.com/kjanat/chatLogger-dashboard#readme",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kjanat/ChatLogger-Dashboard.git"
+		"url": "https://github.com/kjanat/chatLogger-dashboard.git"
 	},
 	"bugs": {
-		"url": "https://github.com/kjanat/ChatLogger-Dashboard/issues",
+		"url": "https://github.com/kjanat/chatLogger-dashboard/issues",
 		"email": "dev+issues-chatlogger-dashboard@kjanat.com"
-	},
-	"scripts": {
+	},	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"lint": "eslint --config eslint.config.js .",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"deploy": "wrangler pages deploy dist"
 	},
 	"dependencies": {
 		"@headlessui/react": "^2.2.2",
