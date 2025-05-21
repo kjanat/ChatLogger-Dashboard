@@ -7,8 +7,6 @@ updates:
       day: "tuesday"
       time: "03:00"
       timezone: "Europe/Amsterdam"
-    reviewers:
-      - "kjanat"
     groups:
       npm-dependencies:
         patterns:
@@ -21,8 +19,6 @@ updates:
       day: "tuesday"
       time: "03:00"
       timezone: "Europe/Amsterdam"
-    reviewers:
-      - "kjanat"
     groups:
       actions-dependencies:
         patterns:
